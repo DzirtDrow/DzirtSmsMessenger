@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Мой типа мессенджер</string>
     <string name="hello_world">Здравствуй, Мир!</string>
+    <string name="sms_permission_denied">Разрешение на работу с смс отсутствует</string>
 </resources>

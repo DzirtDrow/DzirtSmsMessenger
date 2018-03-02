@@ -5,13 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="net.dzirt.dzirtsmsmessenger.MainActivity">
+    tools:context="net.dzirt.dzirtsmsmessenger.Activities.MainActivity">
+
+    <!--android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:src="@android:drawable/ic_menu_add"
+        app:backgroundTint="@android:color/darker_gray"
+        app:fabSize="mini"
+        app:rippleColor="@android:color/black" /-->
 
 
     <ListView
+        android:id="@+id/sms_threads_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </ListView>
+
+
+
 
 </LinearLayout>
