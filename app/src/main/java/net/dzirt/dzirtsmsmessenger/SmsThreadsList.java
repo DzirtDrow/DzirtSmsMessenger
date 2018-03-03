@@ -30,17 +30,12 @@ public class SmsThreadsList {
         try {
             Uri uri = Telephony.Sms.CONTENT_URI;//Uri.parse("content://sms");
             Cursor c = v.getContext().getContentResolver().query(uri, new String[]{"thread_id", "person", "date", "body", "address"}, null, null, null);
-
-            //Cursor c = v.getContext().getContentResolver().query(uri, new String[] {"thread_id"}, null ,null,null);
-            //Cursor c = v.getContext().getContentResolver().query(uri,null,"thread_id = ?", new String[] {"11"},null);
-            //Cursor c = v.getContext().getContentResolver().query(uri,null,"thread_id = ?", new String[] {"11"},null);
             smsThreadsList.clear();
             while (c.moveToNext()) {
 
                 String thread_id = c.getString(c.getColumnIndex("thread_id"));
                 int thread_id_int = Integer.parseInt(thread_id);
 
-                //String person  = c.getString(c.getColumnIndex("person"));
                 String body = c.getString(c.getColumnIndex("body"));
                 long date = c.getLong(c.getColumnIndex("date"));
                 String address = c.getString(c.getColumnIndex("address"));
@@ -61,6 +56,5 @@ public class SmsThreadsList {
             Toast.makeText(v.getContext(), "Error: " + ee.getMessage(), Toast.LENGTH_LONG).show();
         }
         return smsThreadsList;
-
     }
 }

@@ -5,10 +5,11 @@ package net.dzirt.dzirtsmsmessenger;
  */
 
 public class SmsThread {
-    int id;
-    String title;
-    String lastSms;
-    String lastSmsTime;
+
+    private int id;
+    private String title;
+    private String lastSms;
+    private String lastSmsTime;
 
     public SmsThread(int id, String title, String lastSms, String lastSmsTime) {
         this.id = id;
@@ -42,6 +43,7 @@ public class SmsThread {
     }
 
     public String getLastSmsTime() {
+
         return lastSmsTime;
     }
 
